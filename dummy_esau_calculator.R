@@ -9,7 +9,9 @@ ach1 <- 130
 ach2 <- 110
 ach3 <- 90
 
-Ach_point_for_tpsp <- function(ach)
+Ach_point_for_tpsp <- function(ach, des)
+  {
+  if (des %in% c("SE" , "SSE"))
   {
     if (ach >= ach1)
     {
@@ -27,6 +29,11 @@ Ach_point_for_tpsp <- function(ach)
     {
       return(0.01+(ach*69.98)/90)
     }
+  }
+  else 
+  {
+    print("The RM is not a tpsp")
+  }
 }
 
 scored_df <- dummy_df %>% 
