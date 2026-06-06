@@ -1,6 +1,3 @@
-library(dplyr)
-library(purrr)
-
 path <- "D:/Nobel/IDLC/Dummy-Project/dummy_data.RDS"
 
 dummy_df <- readRDS(path)
